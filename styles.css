@@ -1,4 +1,7 @@
+/*Stat copying from here.
 
+Please note I've removed the margin from the body section. 
+*/
 body {
   margin: 0;
   font-family:Helvetica, serif;
@@ -80,6 +83,10 @@ body {
   display: block;
 }
 
+/* 
+You can stop copying here
+*/
+
 #aisleheader{
 	color: #404040;
 	font-size: 30px;
@@ -89,6 +96,12 @@ body {
 	text-align: center;
 	border-style: dotted none dotted none;
 }
+
+/*
+
+I'll be modifying a lot starting from here.
+
+*/
 
 .row{
 
