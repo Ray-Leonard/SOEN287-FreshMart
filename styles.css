@@ -43,8 +43,9 @@ body {
 	color: white
 }
 .active{
-	background-color:#82C0CC;
+	background-color:#82C0CC !important;
 	font-weight:bold;
+	color:white !important;
 }
 
 .dropdown {
