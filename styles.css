@@ -1,13 +1,15 @@
-/*Start copying from here.
+/**
 
-Please note I've removed the margin from the body section. 
-*/
+Shared between all pages
+
+**/
+
 body {
   margin: 0;
-  font-family:Helvetica, serif;
+  font-family: 'roboto-regular', 'Helvetica', "Sans-serif";
 }
 
-#logo{
+#company-logo{
 	position:absolute;
 	height: 80px;
 	width: 75px;
@@ -15,7 +17,7 @@ body {
 	background:white;
 }
 
-.title{ font-family: 'Verdana','Times New Roman', serif;
+#company-name{ font-family: 'Verdana','Times New Roman', serif;
 	color:white;
 	font-size: 50px;
 	font-style: italic;
@@ -25,24 +27,32 @@ body {
 	height: 60px;
 }
 
+#copyright{
+	color:white;
+	background-color:#308090;
+	padding: 20px;
+	text-align:center;
+}
 .topnav{
 	overflow:hidden;
 	background: #303030;
 		
-}
-.topnav a{
+}.topnav a{
 	float: left;
 	color: white;
 	text-align: center;
-	padding: 15px 30px;
+	padding: 15px 40px;
 	font-size: 16px;
 	text-decoration: none;
-}
-.topnav a:hover, .dropdown:hover .dropbtn {
+}.topnav a:hover, .dropdown:hover .dropbtn {
 	background-color:#505050;
 	color: white
-}
-.active{
+}.topnav a.cartlogo{
+	padding:0px 0px;
+	height:48px;
+}.topnav img{
+	max-height:48px;
+}.active{
 	background-color:#82C0CC !important;
 	font-weight:bold;
 	color:white !important;
@@ -51,8 +61,7 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
-}
-.dropdown .dropbtn {
+}.dropdown .dropbtn {
   font-size: 16px;
   border: none;
   outline: none;
@@ -60,8 +69,7 @@ body {
   background: #303030;
   padding: 15px 30px;
   font-family: inherit; 
-}
-.dropdown-content {
+}.dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -69,8 +77,7 @@ body {
   box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.1);
   border: 10px;
   z-index: 10;
-}
-.dropdown-content a {
+}.dropdown-content a {
   float: none;
   color: black;
   padding: 20px 30px;
@@ -78,19 +85,55 @@ body {
   display: block;
   text-align: left;
   border: 10px black;
-}
-.dropdown-content a:hover {
+}.dropdown-content a:hover {
   background-color: #ddd;
-}
-.dropdown:hover .dropdown-content {
+}.dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* 
-You can stop copying here
-*/
+.footer{
+	margin: 50px 0px 0px 0px;
+	background-color:#489FB5;
+	padding:40px;
+	color:white;
+	font-size:15px;
+	font-family='Verdana', Sans-serif;
+}
+.footer-row{
+	display:flex;
+	flex-wrap: wrap;
+}
+.footer-column{
+	width:200px;
+	padding:10px 50px 0px 0px;
+	
+}
+.footer-header{
+	color:#ffbf66;
+	font-size:18px;
+	font-weight:bold;
+}.footer-list{
+	list-style-type:none;
+	width: 200px;
+	padding: 0px;
+}.footer-list a{
+	text-decoration:none;
+}
+.footer-list li{
+	color:white;
+	text-decoration:none;
+	padding:5px;
+}
+.footer-list li:hover{
+	background-color:#16697a;
+}
+/**
 
-#aisleheader{
+Specific to the aisle page
+
+**/
+
+#aisle-header{
 	color: #404040;
 	font-size: 30px;
 	font-weight: bold;
@@ -131,29 +174,29 @@ You can stop copying here
 	
 }
 
-.producttext{
+.product-text{
 	text-align:center;
 	line-height:1.5;
 	width:225px;
 	text-decoration: none;
 	color:black;
-}.productname{
+}.product-name{
 	font-size: 16px;
 	font-weight:bold;
 
-}.smalltext{
+}.small-text{
 	font-size:12px;
 	color: gray;
 	
 	
 
 }
-.productimg{
+.product-img{
 	height:200px;
 	width:225px;
 	position:relative;
 }
-.productimg img{
+.product-img img{
 	max-height:180px;
 	max-width:200px;
 	position: absolute;
@@ -168,16 +211,13 @@ You can stop copying here
 	transition-duration:0.2s;
 }
 
+
+/**
+
 ul.list {
   list-style-type: circle;
   position:static;
 }
-.footer{
-	float:bottom;
-	margin: 50px 0px 0px 0px;
-	overflow:hidden;
-	background-color:#489FB5;
-	padding:50px;
-	height: 50px;
-	width:100%;
-}
+
+**/
+
