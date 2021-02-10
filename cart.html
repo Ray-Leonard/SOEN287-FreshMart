@@ -1,80 +1,196 @@
 <head>
 	<title>Shopping Cart</title>
+	<link rel="icon" type="image/png" href="favicon-16x16.png" size="16x16">
+	<link rel = "stylesheet" type = "text/css" href = "aislestyle.css"/>
 </head>
 	<style>
 table, th, td {
-  border: 1px solid black;
+  border: 2px double gray;
+  text-align: left;
 }
 input.largerCheckbox { 
         width: 40px; 
         height: 40px; 
-    } 
-.header {
-  padding: 15px;
-  text-align: left;
-  background: #1abc9c;
-  color: white;
-  font-size: 15px;
+    }
+.pagecontent{
+	margin-left: 100px;
 }
-footer {
-  text-align: center;
-  padding: 3px;
-  background-color: DarkSalmon;
-  color: white;
+
+#singleProductImage img {
+  height: 100px;
+  border-color: LightGray;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
 }
+.itemGrid{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:left;
+  margin: 10px;
+}
+.center {
+  display:block;
+  padding: 30px 0;
+}
+.centerimage {
+  display:block;
+  padding: 0 10px;
+}
+p {
+  font-size: 1.5	em;
+}
+#itemNumber{
+  text-align:center;
+  font-size:20px;
+}
+input[type=number]{
+    width: 80px;
+} 
+.centerText{
+   text-align: center;
+}
+
 </style>
 	<body onload="check()">
-	<div class="header">
-		<h1>SmartGrocer</h1>
-		<span>Home | Aisles | Login | Cart</span>
+	<!-- Webpage Header part -->
+<img id = "company-logo" src="logo.png">
+
+<div id="company-name">FRESHMART
+</div>
+
+<div class="topnav">
+	<a href="#">Home</a>
+	<div class="dropdown">
+		<button class="dropbtn active">Aisles
+		</button>
+		<!-- You should change the active part and the href link -->
+		<div class="dropdown-content">
+			<a href="fruits-vegetables.html">Fruits and Vegetables</a>
+			<a href="#">Meat and Seafood</a>
+			<a href="#">Dairy and Eggs</a>
+			<a href="#">Bakery</a>
+			<a href="#">Snacks</a>
+			<a href="#">Beverages</a>
+		</div>
 	</div>
+	<a href="#">Contact Us</a>
+	<a href="#" style="float:right;">Log In</a>
+	<a href="#" style="float:right;">Sign up</a>
+	<a class="cartlogo" href="#" style="float: right;">
+		<img src="cart.png">
+	</a>
+</div>
+
+<div class="pagecontent">
 		<h1>Shopping Cart</h1>
 		<button onclick="checkall()">Select/Deselect all items</button>
-		<br>
-			<br>
-				<br>
-					<br>
+		<br><br><br><br>
 
-								<table width="600">
-									<tr>
+		<table width="1000">
+				<tr>
+					<th>Product</th>
+					<th>Quantity</th>
+					<th>Price</th>
+				</tr>
+				<tr>
+				<th>
+					<div class = "itemGrid">
+					<div class="center">
+					<input type="checkbox"class="largerCheckbox" id="colacheck"onclick="check()">
+					</div>
+						<div class="centerimage"id="singleProductImage">
+						<img src="cola.png" alt="item1"height="100px">
+					</div>
+							<p style="padding:15px">Cola 335mL</p>
+					</div>
+						</th>
+						<th class="centerText">
+							<input type="number" value=1 id="itemNumber" name="colaquantity"size="100">
+						</th>
+						<th class="centerText">
+							<p>1.99$</p>
+						</th>
+					</tr>
+				<tr>
+							<th>
+					<div class = "itemGrid">
+					<div class="center">
+					<input type="checkbox"class="largerCheckbox" id="beercheck"onclick="check()">
+					</div>
+						<div class="centerimage"id="singleProductImage">
+						<img src="beer.png" alt="item2"height="100px">
+					</div>
+							<p style="padding:15px">Big Beer 500mL</p>
+					</div>
+						</th>
+						<th class="centerText">
+							<input type="number" value=1 id="itemNumber" name="beerquantity"size="100">
+						</th>
+						<th class="centerText">
+							<p>3.99$</p>
+						</th>
+								</tr>
+				<tr>
 										<th>
-											<input type="checkbox"class="largerCheckbox" id="colacheck"onclick="check()">
-												<img src="http://admin.acceleratingscience.com/food/wp-content/uploads/sites/5/2015/11/red_soft_drink_cup__isolated_on_a_white_background.jpg" alt="item1"width="70" height="100">
-													<span>Cola</span>
-													<span>1.99$</span>
-												</th>
+					<div class = "itemGrid">
+					<div class="center">
+					<input type="checkbox"class="largerCheckbox" id="watercheck"onclick="check()">
+					</div>
+						<div class="centerimage"id="singleProductImage">
+						<img src="water.png" alt="item3"height="100px">
+					</div>
+							<p style="padding:15px">Water 500mL</p>
+					</div>
+						</th>
+						<th class="centerText">
+							<input type="number" value=1 id="itemNumber" name="waterquantity"size="100">
+						</th>
+						<th class="centerText">
+							<p>0.99$</p>
+						</th>
 											</tr>
-										</table>
-										<br>
-											<table width="600">
-												<tr>
-													<th>
-														<input type="checkbox"class="largerCheckbox" id="beercheck"onclick="check()">
-															<img src="https://www.horiba.com/fileadmin/_processed_/csm_01_02-2019_Beer_Brewing_53ef2818e5.png" alt="item2"width="70" height="100">
-																<span>Big Beer</span>
-																<span>3.99$</span>
-															</th>
-														</tr>
-													</table>
-													<br>
-														<table width="600">
-															<tr>
-																<th>
-																	<input type="checkbox"class="largerCheckbox" id="watercheck"onclick="check()">
-																		<img src="https://pngimg.com/uploads/water_bottle/water_bottle_PNG10157.png" alt="item3"width="40" height="100">
-																			<span>Water</span>
-																			<span>0.99$</span>
-																		</th>
-																	</tr>
-																</table>
-																<br>
-																	<br>
+		</table>
+		
 <h2 id="total">Subtotal: 0.00$</h2>
 <h2 id="tax">Total: 0.00$</h2>
+</div>
 
-<footer>
-  <p>Copyright 2021<br>
-</footer>
+<!--Footer Part-->
+<div class="footer">
+	<div class="footer-row">
+		<div class="footer-column">
+			<div class="footer-header">Our Website</div>
+			<ul class="footer-list"> 
+				<a href="#"><li>Homepage</li></a>
+				<a href="#"><li>Contact Us</li></a>
+			</ul>
+		</div>
+
+		<div class="footer-column">
+			<div class="footer-header">Aisles</div>
+			<ul class="footer-list"> 
+				<a href="fruits-vegetables.html"><li>Fruits and Vegetables</li></a>
+				<a href="#"><li>Meat and Seafood</li></a>
+				<a href="#"><li>Dairy and Eggs</li></a>
+				<a href="#"><li>Bakery</li></a>
+				<a href="#"><li>Snacks</li></a>
+				<a href="#"><li>Beverages</li></a>
+			</ul>
+		</div>
+		<div class="footer-column">
+			<div class="footer-header">User Account</div>
+			<ul class="footer-list"> 
+				<a href="#"><li>Account Information</li></a>
+				<a href="#"><li>Shopping cart</li></a>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="copyright">Copyright © 2021 Freshmart</div>
+<!--End of footer part-->
+
 
 <script>
     function check() {
