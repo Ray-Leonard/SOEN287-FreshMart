@@ -31,6 +31,7 @@ body {
 }
 
 #copyright{
+	
 	color:white;
 	background-color:#308090;
 	padding: 20px;
@@ -95,7 +96,6 @@ body {
   display: block;
 }
 
-
 .footer{
 	box-sizing:border-box;
 	position:relative;
@@ -130,3 +130,4 @@ body {
 }.footer-list li:hover{
 	background-color:#16697a;
 }
+
