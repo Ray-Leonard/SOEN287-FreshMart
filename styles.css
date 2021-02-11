@@ -1,13 +1,14 @@
-/**
-
-Shared between all pages
-
-**/
 
 body {
   margin: 0;
   font-family: 'roboto-regular', 'Helvetica', "Sans-serif";
+  height:100%;
 }
+/**
+
+Header section
+
+**/
 
 #company-logo{
 	position:absolute;
@@ -18,21 +19,30 @@ body {
 }
 
 #company-name{ font-family: 'Verdana','Times New Roman', serif;
-	color:white;
 	font-size: 50px;
 	font-style: italic;
 	font-weight: bold;
 	background-color: #489FB5;
 	padding: 30px 20px 30px 140px;
 	height: 60px;
+	color:white;
+}
+
+@media(max-width:600px){
+	#company-name{
+		font-size:40px;
+		padding: 35px 20px 25px 140px;
+	}
 }
 
 #copyright{
+	
 	color:white;
 	background-color:#308090;
 	padding: 20px;
 	text-align:center;
 }
+
 .topnav{
 	overflow:hidden;
 	background: #303030;
@@ -91,24 +101,29 @@ body {
   display: block;
 }
 
+/**
+
+Footer section
+
+**/
 .footer{
+	box-sizing:border-box;
+	position:relative;
 	margin: 50px 0px 0px 0px;
 	background-color:#489FB5;
 	padding:40px;
 	color:white;
 	font-size:15px;
-	font-family='Verdana', Sans-serif;
-}
-.footer-row{
+	font-family:'Verdana', Sans-serif;
+	width:100%;
+}.footer-row{
 	display:flex;
 	flex-wrap: wrap;
-}
-.footer-column{
+}.footer-column{
 	width:200px;
 	padding:10px 50px 0px 0px;
 	
-}
-.footer-header{
+}.footer-header{
 	color:#ffbf66;
 	font-size:18px;
 	font-weight:bold;
@@ -118,18 +133,17 @@ body {
 	padding: 0px;
 }.footer-list a{
 	text-decoration:none;
-}
-.footer-list li{
+}.footer-list li{
 	color:white;
 	text-decoration:none;
 	padding:5px;
-}
-.footer-list li:hover{
+}.footer-list li:hover{
 	background-color:#16697a;
 }
+
 /**
 
-Specific to the aisle page
+Aisle page section
 
 **/
 
@@ -144,6 +158,7 @@ Specific to the aisle page
 }
 
 .grid{
+	position:relative;
 	display:flex;
 	flex-wrap: wrap;
 	justify-content:center;
@@ -167,15 +182,12 @@ Specific to the aisle page
 	align-items: center;
 	height:100px;
 	bottom:0;
-	border-top:1px ;
-	border-color: LightGray;
-	border-style: solid none none none;
-	border-radius: 25px;
-	
+	text-align:center;
+	width:100%;
 }
 
 .product-text{
-	text-align:center;
+	
 	line-height:1.5;
 	width:225px;
 	text-decoration: none;
@@ -203,21 +215,10 @@ Specific to the aisle page
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
 
+}
 .box:hover{
 	filter: opacity(70%);
 	transform:scale(1.01);
 	transition-duration:0.2s;
 }
-
-
-/**
-
-ul.list {
-  list-style-type: circle;
-  position:static;
-}
-
-**/
-
