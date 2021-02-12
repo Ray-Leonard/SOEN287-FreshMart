@@ -31,7 +31,7 @@ body {
 }
 
 #copyright{
-	
+	width:100%;
 	color:white;
 	background-color:#308090;
 	padding: 20px;
