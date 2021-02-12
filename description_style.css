@@ -140,7 +140,8 @@ below is the item description part
 }
 
 #singleProductImage img {
-  height: 300px;
+  max-height: 300px;
+  max-width: 500px;
   border-color: LightGray;
   border-style: solid;
   border-width: 2px;
@@ -185,9 +186,11 @@ below is the item description part
 #itemNumber{
   text-align:left;
   font-size:20px;
+  width:50px;
 }
 
 #addToCart{
+	position:relative;
   background-color: #489FB5; /* Green */
   color: white;
   font-family: Georgia;
@@ -196,13 +199,20 @@ below is the item description part
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right:30px;
+  padding-left: 50px;
+  padding-right:20px;
   font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 6px;
+}
+
+#addToCart img{
+	position:absolute;
+	max-width:50px;
+	left:0;
+	top:0;
 }
 
 #addToCart:hover{
