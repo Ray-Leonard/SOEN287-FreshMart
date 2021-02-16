@@ -4,9 +4,17 @@
 	<link rel = "stylesheet" type = "text/css" href = "aislestyle.css"/>
 </head>
 	<style>
-table, th, td {
-  border: 2px double gray;
-  text-align: left;
+table{
+  border-color: LightGray;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 25px;
+  margin: 50px;
+  margin-left: 10px;
+	display:flex;
+	flex-wrap: wrap;
+
+	
 }
 input.largerCheckbox { 
         width: 40px; 
@@ -14,6 +22,9 @@ input.largerCheckbox {
     }
 .pagecontent{
 	margin-left: 100px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:left;
 }
 
 #singleProductImage img {
@@ -50,6 +61,36 @@ input[type=number]{
 .centerText{
    text-align: center;
 }
+#money {
+  position: relative;
+  width: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: left;
+}
+.button {
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px; 
+  height: 30px; 
+  display:block;
+}
+.title{
+	margin-left: 100px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:left;
+}
+.buttons{
+	margin-left: 100px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:left;
+}
+
+
 
 </style>
 	<body onload="check()">
@@ -62,7 +103,7 @@ input[type=number]{
 <div class="topnav">
 	<a href="#">Home</a>
 	<div class="dropdown">
-		<button class="dropbtn active">Aisles
+		<button class="dropbtn">Aisles
 		</button>
 		<!-- You should change the active part and the href link -->
 		<div class="dropdown-content">
@@ -77,21 +118,23 @@ input[type=number]{
 	<a href="#">Contact Us</a>
 	<a href="#" style="float:right;">Log In</a>
 	<a href="#" style="float:right;">Sign up</a>
-	<a class="cartlogo" href="#" style="float: right;">
+	<a class="cartlogo active" href="#" style="float: right;">
 		<img src="cart.png">
 	</a>
 </div>
 
+<div class="title">
+<h1>Shopping Cart</h1>
+</div>
+<div class="buttons">
+<button class ="button" onclick="checkall()">Select/Deselect all items</button>
+</div>
 <div class="pagecontent">
-		<h1>Shopping Cart</h1>
-		<button onclick="checkall()">Select/Deselect all items</button>
-		<br><br><br><br>
-
 		<table width="1000">
 				<tr>
-					<th>Product</th>
-					<th>Quantity</th>
-					<th>Price</th>
+					<th width="200 px">Product</th>
+					<th width="400 px">Quantity</th>
+					<th width="200 px">Price</th>
 				</tr>
 				<tr>
 				<th>
@@ -107,6 +150,7 @@ input[type=number]{
 						</th>
 						<th class="centerText">
 							<input type="number" value=1 id="itemNumber" name="colaquantity"size="100">
+							<p><button>Delete</button></p>
 						</th>
 						<th class="centerText">
 							<p>1.99$</p>
@@ -126,6 +170,7 @@ input[type=number]{
 						</th>
 						<th class="centerText">
 							<input type="number" value=1 id="itemNumber" name="beerquantity"size="100">
+							<p><button>Delete</button></p>
 						</th>
 						<th class="centerText">
 							<p>3.99$</p>
@@ -145,16 +190,59 @@ input[type=number]{
 						</th>
 						<th class="centerText">
 							<input type="number" value=1 id="itemNumber" name="waterquantity"size="100">
+							<p><button>Delete</button></p>
 						</th>
 						<th class="centerText">
 							<p>0.99$</p>
 						</th>
 											</tr>
 		</table>
-		
-<h2 id="total">Subtotal: 0.00$</h2>
-<h2 id="tax">Total: 0.00$</h2>
+<br>
+<br>
+
+<div id="money">
+	<table width="350">
+
+	<tr>
+			<th width="200"><h2>Order Summary</h2></th>
+			<th width="150"><h2>(3 items)</h2></th>
+	</tr>
+	<tr>
+		<th>_____________________</th>
+		<th>________</th>
+	</tr>
+	<tr>
+			<th width="100">Subtotal:</th>
+			<th width="200"id="total">0.00$</th>
+			<th height="30"></th>
+	</tr>
+	
+	<tr>
+			<th width="100">QST:</th>
+			<th width="200">0.00$</th>
+			<th height="30"></th>
+	</tr>
+	<tr>
+			<th width="100">GST:</th>
+			<th width="200">0.00$</th>
+	</tr>
+	<tr>
+		<th>_____________________</th>
+		<th>________</th>
+	</tr>
+	<tr>
+			<th>Total:</th>
+			<th id="tax"></th>
+			<th height="30"></th>
+	</tr>
+	</table>
 </div>
+</div>
+<div class="buttons">
+<a href="homepage.html">Continue Shopping</a>
+</div>
+
+
 
 <!--Footer Part-->
 <div class="footer">
@@ -208,10 +296,10 @@ input[type=number]{
     totalcost=totalcost+0.99;
   }
   totalcost=Math.floor(totalcost* 100) / 100;
-  document.getElementById("total").innerHTML = "Subtotal: "+totalcost + "$";
+  document.getElementById("total").innerHTML =totalcost + "$";
   var plustax=totalcost*1.15;
   plustax=Math.floor(plustax* 100) / 100;
-  document.getElementById("tax").innerHTML = "Total: "+plustax + "$";
+  document.getElementById("tax").innerHTML =plustax + "$";
 }
     function checkall(){
         var iscola= document.getElementById("colacheck").checked;
