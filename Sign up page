@@ -311,6 +311,13 @@ button:hover {
 
     <label for="psw-repeat"><b>Confirm Password</b></label>
     <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+    
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address " name="address" required>
+  
+    <label for="postal code"><b>Postal Code</b></label>
+    <input type="text" placeholder="Enter Postal code" name="postal code" required>
+    
     <hr>    
    
 
