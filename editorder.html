@@ -24,9 +24,10 @@
 		<a href="customers.html"><img class="icon" src="images/customer.png" alt="customer icon">Customers</a>
 	</div>
 
-
+	
 
 	<form action="/action_page.php" style="border:1px solid #ccc">
+	
 		  <div class="container">
 		    
 			<h1 style="text-align: center;">Order #O-000001</h1>
@@ -39,7 +40,12 @@
 		    <input type="text" value = "000001" placeholder="Serial" name="serial" readonly>
 	        <hr>
 		    <h2><b>Order Summary</b></h2>
+			<div class="center-box">
+	<div class="edit-delete" style="float: right">
+		<button class="header-button">Add New Item</button>
+	</div>
 		<table class="list">
+		
 		<tr>
 			<td class="headers">Serial #</td>
 			<td class="headers">Description</td>
@@ -80,8 +86,6 @@
 		    <input type="text" value = "3425 Summer Ave." placeholder="Edit Address" name="address" required>
 			<label for="postal"><b>Postal Code</b></label>
 			<input type="text" value = "H3X 4B5" placeholder="Edit Postal" name="postal" required>
-			<label for="cityprovince"><b>City, Province</b></label>
-			<input type="text" value = "Montreal, QC" placeholder="Edit city" name="city" required>
 		    <hr>    
 		   
 
