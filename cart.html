@@ -4,7 +4,7 @@
 	<link rel = "stylesheet" type = "text/css" href = "styles.css"/>
 </head>
 
-	<body onload="check()">
+	<body>
 	<!-- Webpage Header part -->
 <img id = "company-logo" src="logo.png">
 
@@ -38,10 +38,10 @@
 <h1>Shopping Cart</h1>
 </div>
 <div class="buttonscart">
-<button class ="buttoncart" onclick="checkall()">Select/Deselect all items</button>
+<button class ="buttoncart">Select/Deselect all items</button>
 </div>
 <div class="pagecontentcart">
-		<table class ="cartcontent"width="1000">
+		<table class ="cartcontent">
 				<tr>
 					<th width="200 px">Product</th>
 					<th width="400 px">Quantity</th>
@@ -50,11 +50,8 @@
 				<tr>
 				<th>
 					<div class = "itemGridCart">
-					<div class="centercart">
-					<input type="checkbox"class="largerCheckbox" id="colacheck"onclick="check()">
-					</div>
 						<div class="centerimagecart"id="singleProductImageCart">
-						<img src="cola.png" alt="item1"height="100px">
+						<img src="cola.png" alt="item1">
 					</div>
 							<p style="padding:15px">Cola 335mL</p>
 					</div>
@@ -70,11 +67,8 @@
 				<tr>
 							<th>
 					<div class = "itemGridCart">
-					<div class="centercart">
-					<input type="checkbox"class="largerCheckbox" id="beercheck"onclick="check()">
-					</div>
 						<div class="centerimagecart"id="singleProductImageCart">
-						<img src="beer.png" alt="item2"height="100px">
+						<img src="beer.png" alt="item2">
 					</div>
 							<p style="padding:15px">Big Beer 500mL</p>
 					</div>
@@ -90,11 +84,8 @@
 				<tr>
 										<th>
 					<div class = "itemGridCart">
-					<div class="centercart">
-					<input type="checkbox"class="largerCheckbox" id="watercheck"onclick="check()">
-					</div>
 						<div class="centerimagecart"id="singleProductImageCart">
-						<img src="water.png" alt="item3"height="100px">
+						<img src="water.png" alt="item3">
 					</div>
 							<p style="padding:15px">Water 500mL</p>
 					</div>
@@ -191,41 +182,5 @@
 <!--End of footer part-->
 
 
-<script>
-    function check() {
-    var colacheckbox = document.getElementById("colacheck");
-    var beercheckbox = document.getElementById("beercheck");
-    var watercheckbox = document.getElementById("watercheck");
-    var totalcost=0;
-    if (colacheckbox.checked == true){
-    totalcost=totalcost+1.99;
-  }
-  if (beercheckbox.checked == true){
-    totalcost=totalcost+3.99;
-  }
-  if (watercheckbox.checked == true){
-    totalcost=totalcost+0.99;
-  }
-  totalcost=Math.floor(totalcost* 100) / 100;
-  document.getElementById("total").innerHTML =totalcost + "$";
-  var plustax=totalcost*1.15;
-  plustax=Math.floor(plustax* 100) / 100;
-  document.getElementById("tax").innerHTML =plustax + "$";
-}
-    function checkall(){
-        var iscola= document.getElementById("colacheck").checked;
-        var isbeer=document.getElementById("beercheck").checked;
-        var iswater=document.getElementById("watercheck").checked;
-        if (iscola==false && isbeer==false && iswater==false) {
-            document.getElementById("colacheck").checked = true;
-            document.getElementById("beercheck").checked = true;
-            document.getElementById("watercheck").checked = true;
-        } else {
-            document.getElementById("colacheck").checked = false;
-            document.getElementById("beercheck").checked = false;
-            document.getElementById("watercheck").checked = false;
-        }
-        check();
-    }
-</script>
+
 																	</body>
