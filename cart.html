@@ -1,98 +1,9 @@
 <head>
 	<title>Shopping Cart</title>
 	<link rel="icon" type="image/png" href="favicon-16x16.png" size="16x16">
-	<link rel = "stylesheet" type = "text/css" href = "aislestyle.css"/>
+	<link rel = "stylesheet" type = "text/css" href = "styles.css"/>
 </head>
-	<style>
-table{
-  border-color: LightGray;
-  border-style: solid;
-  border-width: 4px;
-  border-radius: 25px;
-  margin: 50px;
-  margin-left: 10px;
-	display:flex;
-	flex-wrap: wrap;
 
-	
-}
-input.largerCheckbox { 
-        width: 40px; 
-        height: 40px; 
-    }
-.pagecontent{
-	margin-left: 100px;
-	display:flex;
-	flex-wrap: wrap;
-	justify-content:left;
-}
-
-#singleProductImage img {
-  height: 100px;
-  border-color: LightGray;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 25px;
-}
-.itemGrid{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content:left;
-  margin: 10px;
-}
-.center {
-  display:block;
-  padding: 30px 0;
-}
-.centerimage {
-  display:block;
-  padding: 0 10px;
-}
-p {
-  font-size: 1.5	em;
-}
-#itemNumber{
-  text-align:center;
-  font-size:20px;
-}
-input[type=number]{
-    width: 80px;
-} 
-.centerText{
-   text-align: center;
-}
-#money {
-  position: relative;
-  width: 100px;
-  padding-left: 25px;
-  padding-right: 25px;
-  text-align: left;
-}
-.button {
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  width: 200px; 
-  height: 30px; 
-  display:block;
-}
-.title{
-	margin-left: 100px;
-	display:flex;
-	flex-wrap: wrap;
-	justify-content:left;
-}
-.buttons{
-	margin-left: 100px;
-	display:flex;
-	flex-wrap: wrap;
-	justify-content:left;
-}
-
-
-
-</style>
 	<body onload="check()">
 	<!-- Webpage Header part -->
 <img id = "company-logo" src="logo.png">
@@ -123,14 +34,14 @@ input[type=number]{
 	</a>
 </div>
 
-<div class="title">
+<div class="titlecart">
 <h1>Shopping Cart</h1>
 </div>
-<div class="buttons">
-<button class ="button" onclick="checkall()">Select/Deselect all items</button>
+<div class="buttonscart">
+<button class ="buttoncart" onclick="checkall()">Select/Deselect all items</button>
 </div>
-<div class="pagecontent">
-		<table width="1000">
+<div class="pagecontentcart">
+		<table class ="cartcontent"width="1000">
 				<tr>
 					<th width="200 px">Product</th>
 					<th width="400 px">Quantity</th>
@@ -138,61 +49,61 @@ input[type=number]{
 				</tr>
 				<tr>
 				<th>
-					<div class = "itemGrid">
-					<div class="center">
+					<div class = "itemGridCart">
+					<div class="centercart">
 					<input type="checkbox"class="largerCheckbox" id="colacheck"onclick="check()">
 					</div>
-						<div class="centerimage"id="singleProductImage">
+						<div class="centerimagecart"id="singleProductImageCart">
 						<img src="cola.png" alt="item1"height="100px">
 					</div>
 							<p style="padding:15px">Cola 335mL</p>
 					</div>
 						</th>
-						<th class="centerText">
-							<input type="number" value=1 id="itemNumber" name="colaquantity"size="100">
+						<th class="centerTextcart">
+							<input class="cartqnt" type="number" value=1 id="itemNumberCart" name="colaquantity"size="100">
 							<p><button>Delete</button></p>
 						</th>
-						<th class="centerText">
+						<th class="centerTextcart">
 							<p>1.99$</p>
 						</th>
 					</tr>
 				<tr>
 							<th>
-					<div class = "itemGrid">
-					<div class="center">
+					<div class = "itemGridCart">
+					<div class="centercart">
 					<input type="checkbox"class="largerCheckbox" id="beercheck"onclick="check()">
 					</div>
-						<div class="centerimage"id="singleProductImage">
+						<div class="centerimagecart"id="singleProductImageCart">
 						<img src="beer.png" alt="item2"height="100px">
 					</div>
 							<p style="padding:15px">Big Beer 500mL</p>
 					</div>
 						</th>
-						<th class="centerText">
-							<input type="number" value=1 id="itemNumber" name="beerquantity"size="100">
+						<th class="centerTextcart">
+							<input class="cartqnt" type="number" value=1 id="itemNumberCart" name="beerquantity"size="100">
 							<p><button>Delete</button></p>
 						</th>
-						<th class="centerText">
+						<th class="centerTextcart">
 							<p>3.99$</p>
 						</th>
 								</tr>
 				<tr>
 										<th>
-					<div class = "itemGrid">
-					<div class="center">
+					<div class = "itemGridCart">
+					<div class="centercart">
 					<input type="checkbox"class="largerCheckbox" id="watercheck"onclick="check()">
 					</div>
-						<div class="centerimage"id="singleProductImage">
+						<div class="centerimagecart"id="singleProductImageCart">
 						<img src="water.png" alt="item3"height="100px">
 					</div>
 							<p style="padding:15px">Water 500mL</p>
 					</div>
 						</th>
-						<th class="centerText">
-							<input type="number" value=1 id="itemNumber" name="waterquantity"size="100">
+						<th class="centerTextcart">
+							<input class="cartqnt" type="number" value=1 id="itemNumberCart" name="waterquantity"size="100">
 							<p><button>Delete</button></p>
 						</th>
-						<th class="centerText">
+						<th class="centerTextcart">
 							<p>0.99$</p>
 						</th>
 											</tr>
@@ -200,8 +111,8 @@ input[type=number]{
 <br>
 <br>
 
-<div id="money">
-	<table width="350">
+<div id="moneycart">
+	<table class = "cartcontent" width="350">
 
 	<tr>
 			<th width="200"><h2>Order Summary</h2></th>
@@ -238,7 +149,7 @@ input[type=number]{
 	</table>
 </div>
 </div>
-<div class="buttons">
+<div class="buttonscart">
 <a href="homepage.html">Continue Shopping</a>
 </div>
 
